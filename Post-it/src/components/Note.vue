@@ -1,6 +1,6 @@
 <template>
     <div class="hello">
-        <h1> {{ title }} </h1>
+        <h1> {{ title }} : {{ id }} </h1>
         <ul>
             <li v-for="step in steps" :key="step" > {{ step }} </li>
         </ul>
@@ -9,23 +9,23 @@
 </template>
 
 <script>
-    export default {
-        name:'Notes',
-        props: {
-            id: {
-            type : Number,
-            required: true,
-            }
-        },
-    data() {
-        return{
-            title: String,
-            steps: Array,
-        };
-    },
-    created(){
-    this.title = JSON.parse(localStorage.getItem("notes"))[this.id - 1].title;
-    this.title = JSON.parse(localStorage.getItem("notes"))[this.id - 1].steps;
-    },
-    };
+export default {
+  name: 'Notes',
+  props: {
+    id: {
+      type: Number,
+      required: true
+    }
+  },
+  data () {
+    return {
+      title: String,
+      steps: Array
+    }
+  },
+  created () {
+    this.title = JSON.parse(localStorage.getItem('notes'))[this.id - 1].title
+    this.steps = JSON.parse(localStorage.getItem('notes'))[this.id - 1].steps
+  }
+}
 </script>

@@ -1,13 +1,18 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+  <NoteDetails/>
+  <router-view/>
   </div>
 </template>
 
 <script>
+import NoteDetails from '@/components/NoteDetails.vue'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    NoteDetails
+  }
+
 }
 </script>
 

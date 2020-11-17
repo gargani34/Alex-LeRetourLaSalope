@@ -14,7 +14,8 @@
      </div>
 </template>
 <script>
-    export default {
-        name: 'NoteDetails'
-    }
+export default {
+  name: 'NoteDetails'
+}
+
 </script>
